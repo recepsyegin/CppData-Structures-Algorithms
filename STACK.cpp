@@ -4,6 +4,7 @@ using namespace std;
 
 
 									/*STACK YAPISI*/
+									/*FIRST IN FIRST OUT !*/
 
 class Node{
 	private :
@@ -30,13 +31,13 @@ class Node{
 
 class Stack{
 	public:
-		Node *root; // "Top" d¸¸m
-		int cnt; // Konteyn˝r desek kˆt¸ olmaz... Yani ne kadar eleman tutacak?
+		Node *root; // "Top" d√º√∞√ºm
+		int cnt; // Konteyn√Ωr desek k√∂t√º olmaz... Yani ne kadar eleman tutacak?
 		
 		Stack()
 		{
 			root = NULL;
-			cnt = 0;	// Ba˛lang˝Áta depo bo˛ !
+			cnt = 0;	// Ba√ælang√Ω√ßta depo bo√æ !
 		}
 		
 		bool isEmpty()
@@ -45,16 +46,16 @@ class Stack{
 		}
 		bool isFull()
 		{
-			return cnt == SIZE; // DEPO 5 ELEMANLI YAN› SIZE'YE Eﬁ›TSE FULL DEMEK ! BAﬁKA DE–ER ALAMAZ
+			return cnt == SIZE; // DEPO 5 ELEMANLI YAN√ù SIZE'YE E√û√ùTSE FULL DEMEK ! BA√ûKA DE√êER ALAMAZ
 		}
 		
-		void push(int value) // EKLEME ›ﬁLEM›
+		void push(int value) // EKLEME √ù√ûLEM√ù
 		{
 			if(isEmpty())
 			{
 				root = new Node(value);
 				cout << "Stack yapisi olustu ve ilk eleman eklendi!" << endl;
-				cnt++; // Eleman eklendii iÁin bir artt˝rmak
+				cnt++; // Eleman eklendi√∞i i√ßin bir artt√Ωrmak
 			}
 			else
 			{
@@ -72,7 +73,7 @@ class Stack{
 				}
 			}
 		}
-		void pop() // S›LME ›ﬁLEM›
+		void pop() // S√ùLME √ù√ûLEM√ù
 		{
 			if(isEmpty()) cout << "Stack zaten bos! Silinecek deger yok !" << endl;
 			else
@@ -81,12 +82,12 @@ class Stack{
 				root = root->next;
 				cout << temp->getData() << "Stack'ten cikartildi" << endl;
 				delete temp;
-				cnt -- ; // Sildiimiz iÁin depoda yer aÁ˝yoruz!
+				cnt -- ; // Sildi√∞imiz i√ßin depoda yer a√ß√Ωyoruz!
 			}
 		}
 		void print()
 		{
-			system("cls"); // Deerleri print edeceimiz zaman ekran˝ temizlemek
+			system("cls"); // De√∞erleri print edece√∞imiz zaman ekran√Ω temizlemek
 			if(isEmpty()) cout << "Stack bos, gosterilecek deger yok !" << endl;
 			else
 			{
@@ -94,7 +95,7 @@ class Stack{
 				cout << "TOP" << endl;
 				while(temp!=NULL)
 				{
-					cout << temp->getData()<<endl; // Deeri "get" ediyoruz, yani gˆsteriyoruz.
+					cout << temp->getData()<<endl; // De√∞eri "get" ediyoruz, yani g√∂steriyoruz.
 					temp = temp -> next;
 				}
 				cout << "TABAN" << endl;
@@ -127,11 +128,11 @@ class Stack{
 			}
 			else
 			{
-				cout << "TOP DEGER : " << root->getData() << endl ; // ROOT BAﬁ, TOP DE–ER HER ZAMAN
+				cout << "TOP DEGER : " << root->getData() << endl ; // ROOT BA√û, TOP DE√êER HER ZAMAN
 			}
 		}		
 		
-		void size() // STACK ELEMAN SAYISI G÷STERMEK
+		void size() // STACK ELEMAN SAYISI G√ñSTERMEK
 		{
 			system("cls");
 			if(isEmpty()) cout << "Stack bos, eleman sayisi : 0" << endl;
