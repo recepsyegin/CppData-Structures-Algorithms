@@ -4,7 +4,7 @@ using namespace std;
 
 
 									/*STACK YAPISI*/
-									/*FIRST IN FIRST OUT !*/
+									/*LAST IN FIRST OUT - İLK GİREN SON ÇIKAR*/
 
 class Node{
 	private :
