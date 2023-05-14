@@ -27,7 +27,7 @@ class BST{
 			return root == NULL;
 		}
 		
-		Node * insert (Node *start, int data) // Yardımcı ekleme methodu (rekürsif yapı)
+		Node * insert (Node *start, int data) // YardÃ½mcÃ½ ekleme methodu (rekÃ¼rsif yapÃ½)
 		{
 			if(start!=NULL)
 			{
@@ -42,12 +42,12 @@ class BST{
 			}
 			return start;
 		}
-		void insert(int data) // Asıl ekleme methodu
+		void insert(int data) // AsÃ½l ekleme methodu
 		{
 			root = insert(root,data);
 		}
 		
-		void preOrder(Node *root) // ÖNCE KÖK YAPISI İLE SIRALAMA
+		void preOrder(Node *root) // Ã–NCE KÃ–K YAPISI ÃLE SIRALAMA
 		{
 			if(root!=NULL)
 			{
@@ -57,7 +57,7 @@ class BST{
 			}
 		}
 		
-		void inOrder(Node *root) // ORTADA KÖK YAPISI İLE SIRALAMA
+		void inOrder(Node *root) // ORTADA KÃ–K YAPISI ÃLE SIRALAMA
 		{
 			if(root!=NULL)
 			{
@@ -67,7 +67,7 @@ class BST{
 			}	
 		}
 		
-		void postOrder(Node *root) // SONDA KÖK YAPISI İLE SIRALAMA
+		void postOrder(Node *root) // SONDA KÃ–K YAPISI ÃLE SIRALAMA
 		{
 			if(root!=NULL)
 			{
@@ -77,7 +77,7 @@ class BST{
 			}			
 		}
 		
-		int size(Node *root) // Düğüm sayısını bulmak
+		int size(Node *root) // DÃ¼Ã°Ã¼m sayÃ½sÃ½nÃ½ bulmak
 		{
 			if(root==NULL) return 0;
 			
@@ -85,7 +85,7 @@ class BST{
 				return size(root->left) + 1 + size(root->right);
 		}
 		
-		int height(Node *root) // BST'nin uzunluğunu bulmak
+		int height(Node *root) // BST'nin uzunluÃ°unu bulmak
 		{
 			if(root == NULL) return 0;
 			else
@@ -98,7 +98,7 @@ class BST{
 			}
 		}
 		
-		int min(Node *root) // Minimum değer BST'de en solda olur !
+		int min(Node *root) // Minimum deÃ°er BST'de en solda olur !
 		{
 			Node *temp = root;
 			if(root==NULL)
@@ -113,7 +113,7 @@ class BST{
 			}
 		}
 		
-		int max(Node *root) // Max değer BST'de en sağda olur !
+		int max(Node *root) // Max deÃ°er BST'de en saÃ°da olur !
 		{
 			Node *temp = root;
 			if(root==NULL)
@@ -129,7 +129,7 @@ class BST{
 		
 		Node *search(Node *root,int data)
 		{
-			// REKÜRSİF OLARAK DEĞERE GÖRE REKÜRSİF OLARAK DATA ARANACAK
+			// REKÃœRSÃF OLARAK DEÃERE GÃ–RE REKÃœRSÃF OLARAK DATA ARANACAK
 			if(root!=NULL)
 			{
 				if(root->data==data)
@@ -160,7 +160,7 @@ int main()
 	cout << "PREORDER: "; bst.preOrder(bst.root);
 	cout << "\nINORDER: "; bst.inOrder(bst.root);
 	cout << "\nPOSTORDER: "; bst.postOrder(bst.root);
-	cout << "\nDUGUM SAYISI: "<< bst.size(bst.root);   // ??
+	cout << "\nDUGUM SAYISI: "<< bst.size(bst.root);   
 	cout << endl;
 	cout << "YUKSEKLIK: "<< bst.height(bst.root);
 	cout << endl;
